@@ -19,12 +19,26 @@ class HotPicks extends Component {
 			<div>
 				<p className="text-4xl">Hot Picks For You</p>
 				<div>
-					<Carousel show={1} slide={1} swiping={true}>
-						<div className="h-64 my-10" color="#2d66c3">We love Web 🌐</div>
-						<div className="h-64 my-10" color="#f44336">We love Developers 👩🏻‍</div>
-            <div className="h-64 my-10" color="#d53f8c">This is our github</div>
-            <div className="h-64 my-10" color="#f27a1a">This is our website</div>
-					</Carousel>
+					<Slider {...settings}>
+						<div>
+							<h3>1</h3>
+						</div>
+						<div>
+							<h3>2</h3>
+						</div>
+						<div>
+							<h3>3</h3>
+						</div>
+						<div>
+							<h3>4</h3>
+						</div>
+						<div>
+							<h3>5</h3>
+						</div>
+						<div>
+							<h3>6</h3>
+						</div>
+					</Slider>
 				</div>
 			</div>
 		);
