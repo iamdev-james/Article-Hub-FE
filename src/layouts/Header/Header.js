@@ -11,7 +11,7 @@ class Header extends Component {
   }
   render () {
     return (
-      <div className="w-full py-6 flex flex-row justify-around items-center bg-inherit fixed text-white">
+      <div className="w-full py-6 flex flex-row justify-around items-center bg-inherit absolute text-white">
         <div className="">
           <p className="text-2xl font-bold">{ this.state.headerTitle }</p>
         </div>

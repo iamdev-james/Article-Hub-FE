@@ -1,5 +1,16 @@
 .App {
   text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+}
+
+.herosection {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.hotPicks {
+  grid-column: 1/3;
 }
 
 .App-logo {

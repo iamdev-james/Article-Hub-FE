@@ -7,6 +7,7 @@ import './App.css';
 import Header from './layouts/Header/Header';
 import HeroSection from './components/HeroSection/HeroSection';
 import HotPicks from './components/TopPicks/TopPicks';
+import SideBar from './components/SideBar/SideBar';
 
 class App extends Component {
   constructor() {
@@ -19,8 +20,15 @@ class App extends Component {
     return (
       <div className='App'>
         <Header />
-        <HeroSection />
-        <HotPicks />
+        <div className='herosection'>
+          <HeroSection />
+        </div>
+        <div className='hotPicks'>
+          <HotPicks />
+        </div>
+        <div className='SideBar'>
+          <SideBar />
+        </div>
       </div>
     )
   }
