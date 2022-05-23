@@ -5,34 +5,85 @@ class HotPicks extends Component {
 	constructor() {
 		super();
 		this.state = {
-			HotArticle: [
-				{
-					title: "Evolution of web 3",
-					subTitle: "Web3 as a whole not a scam but real",
-					articleImg: "https://media.istockphoto.com/photos/young-woman-leaving-picture-id1299310735?b=1&k=20&m=1299310735&s=170667a&w=0&h=EYbkIHkWWF7scKQ14spPLnD-aTXvtDlVMVL_9v5eSVg="
-				},
-				{
-					title: "Is NFTs legal or not",
-					subTitle: "Have you been thinking of venturing into the NFT world.......",
-					articleImg: "https://images.unsplash.com/photo-1508138221679-760a23a2285b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500"
-				},
-				{
-					title: "Transitioning into tech",
-					subTitle: "A complete beginners guide on getting started as a developer",
-					articleImg: "https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHJhbmRvbXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500"
-				},
-				{
-					title: "Best web practices",
-					subTitle: "Are you a developer but don't know the best way to do things",
-					articleImg: "https://media.istockphoto.com/photos/lottery-picture-id95442265?b=1&k=20&m=95442265&s=170667a&w=0&h=fKu1DRGrbfXVXWHR5c0MlE2glGse5-l8DwoUrQH4UUA="
-				},
-				{
-					title: "Best way to assimilate quickly",
-					subTitle: "There are numerous ways in which you can assimilate........",
-					articleImg: "https://images.unsplash.com/photo-1613336026275-d6d473084e85?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHJhbmRvbXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500"
-				}
-			],
-		};
+      cryptoNews: [
+        {
+          "links": {
+            "self": "http://example.com/articles",
+            "next": "http://example.com/articles?page[offset]=2",
+            "last": "http://example.com/articles?page[offset]=10"
+          },
+          "data": [{
+            "type": "articles",
+            "id": "1",
+            "attributes": {
+              "title": "JSON:API paints my bikeshed!"
+            },
+            "relationships": {
+              "author": {
+                "links": {
+                  "self": "http://example.com/articles/1/relationships/author",
+                  "related": "http://example.com/articles/1/author"
+                },
+                "data": { "type": "people", "id": "9" }
+              },
+              "comments": {
+                "links": {
+                  "self": "http://example.com/articles/1/relationships/comments",
+                  "related": "http://example.com/articles/1/comments"
+                },
+                "data": [
+                  { "type": "comments", "id": "5" },
+                  { "type": "comments", "id": "12" }
+                ]
+              }
+            },
+            "links": {
+              "self": "http://example.com/articles/1"
+            }
+          }],
+          "included": [{
+            "type": "people",
+            "id": "9",
+            "attributes": {
+              "firstName": "Dan",
+              "lastName": "Gebhardt",
+              "twitter": "dgeb"
+            },
+            "links": {
+              "self": "http://example.com/people/9"
+            }
+          }, {
+            "type": "comments",
+            "id": "5",
+            "attributes": {
+              "body": "First!"
+            },
+            "relationships": {
+              "author": {
+                "data": { "type": "people", "id": "2" }
+              }
+            },
+            "links": {
+              "self": "http://example.com/comments/5"
+            }
+          }, {
+            "type": "comments",
+            "id": "12",
+            "attributes": {
+              "body": "I like XML better"
+            },
+            "relationships": {
+              "author": {
+                "data": { "type": "people", "id": "9" }
+              }
+            },
+            "links": {
+              "self": "http://example.com/comments/12"
+            }
+          }]
+        }
+      ]
+    };
 	}
 	render() {
 		var settings = {
